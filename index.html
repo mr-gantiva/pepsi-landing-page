@@ -12,7 +12,8 @@
     <section class="sec">
       <header>
         <a href="#"><img src="img/logo.png" class="logo" alt="logo Pepsi" /></a>
-        <ul>
+        <div class="toggleMenu" onclick="menuToggle();"></div>
+        <ul class="navigation">
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">What's New</a></li>
@@ -80,6 +81,13 @@
       function changeBgColor(color) {
         const sec = document.querySelector(".sec");
         sec.style.background = color;
+      }
+
+      function menuToggle() {
+        const toggleMenu = document.querySelector(".toggleMenu");
+        const navigation = document.querySelector(".navigation");
+        toggleMenu.classList.toggle("active");
+        navigation.classList.toggle("active");
       }
     </script>
   </body>
